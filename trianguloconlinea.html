@@ -1,0 +1,38 @@
+<!-- Ejercicio 514: Dibujar dos líneas de diferente color sobre un elemento HTML canvas. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 514</title>
+</head>
+<body>
+	<canvas id="lineas" width="300px" height="300px" style="border: 2px solid gray;"></canvas>
+	
+	<script>
+		window.addEventListener('load', () => {
+			let canvasLineas = document.getElementById('lineas');
+			let ctx = canvasLineas.getContext('2d');
+
+			ctx.beginPath();
+			ctx.strokeStyle = 'crimson';
+			ctx.moveTo(150, 75);
+			ctx.lineTo(70, 200);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.strokeStyle = 'green';
+			ctx.moveTo(150, 75);
+			ctx.lineTo(225, 200);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.strokeStyle = 'blue';
+			ctx.moveTo(225, 200);
+			ctx.lineTo(70, 200);
+			ctx.stroke();
+		});
+	</script>
+</body>
+</html>
